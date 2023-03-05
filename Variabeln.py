@@ -14,8 +14,9 @@ print(type(s))                        # <class 'str'>
 y2 = float(y)
 print(type(y2))                       # <class 'float'>
 # Can we convert the str to int ?
-# s2 = int(s)                         # No , give us a Error , but we can convert integer/float to string
-# print(s2)
+n="34"
+m = int(n)                         # yes but when we have a number
+print(m)
 z2 = str(z)
 print(type(z2))                       # <class 'str'>
 # Create a list of numbers from 1 to 5
