@@ -27,3 +27,13 @@ print(tupleNama)                               # (1, 2, 3, 4, 5)
 # No
 # Create a dict of value Mahmoud:28 , ahmed:30
 dictName = {'Mahmoud':28 , 'ahmed':30}
+print(dictName)                                # {'Mahmoud': 28, 'ahmed': 30}
+# Print Mahmoud age from the dict
+print(dictName.get('Mahmoud'))                 # 28
+# What is the differences between mutable and immutable data types ?
+#  Lists are just like the arrays, declared in other languages. Lists need not be homogeneous always which makes
+#  it a most powerful tool in Python. Lists are mutable, and hence, they can be altered even after their creation.
+
+# Tuple is immutable: A tuple is a collection which is ordered and unchangeable, does not allow duplicate members.
+# In Python tuples ar written with round or inside parentheses (), separated by commas. The parentheses are optional,
+# however, it is a good practice to use them.
