@@ -15,3 +15,4 @@ for j in range(11):
     if j ==5:
         break
     print(j)
+# Print multiplication table from 1 to 5 (comming soon )
