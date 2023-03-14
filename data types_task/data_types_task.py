@@ -20,3 +20,10 @@ print(len(listName))                           # 13
 # replace the second element in the list with 100
 listName[1] = 100
 print(listName)                                # [10, 100, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 30]
+# Create a tuple with values from 1 to 5
+tupleNama = (1,2,3,4,5)
+print(tupleNama)                               # (1, 2, 3, 4, 5)
+# Can we add 10 to the end of the tuple?
+# No
+# Create a dict of value Mahmoud:28 , ahmed:30
+dictName = {'Mahmoud':28 , 'ahmed':30}
