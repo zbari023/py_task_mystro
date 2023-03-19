@@ -3,17 +3,22 @@
 import random
 class Game:
     def __init__(self):
-        print('Welcome in Python Game')
-        user = eval(input('Enter your Game Number: '))
+        while True:
+            print('Welcome in Python Game')
+            user = eval(input('Enter your Game Number: '))
 
-        if user == 1:
-            x = int(input('Enter your first Number:  '))
-            y = int(input('Enter your second Number:  '))
-            self.Maximum(x,y)
-        elif user == 2:
-            self.money_game()
+            if user == 1:
+                x = int(input('Enter your first Number:  '))
+                y = int(input('Enter your second Number:  '))
+                self.Maximum(x, y)
+            elif user == 2:
+                self.money_game()
+            else:
+                return print('please chose the game number 1 or 2')
         else:
-            return print('please chose the game number 1 or 2')
+            exit()
+
+
 
     def Maximum(self, x, y):
         print("Max of 2 values: ")
@@ -28,7 +33,7 @@ class Game:
     def money_game(self):
         limit = 100;
         start = 0  # Insert Boundary
-        # if a print given then you see the dice number
+        # if a print given then you see the rolled number
         rolled_number = random.randint(start, limit)
         # In_number=None around the while loop always presses the input until the target
         self.In_number = None
@@ -44,12 +49,12 @@ class Game:
             else:
                 print("Your number is less than the correct number ):")
                 counter = counter + 1
-        print(" you needed " + str(counter) + "tries" )
+        print(" you needed " + str(counter) + " tries" )
 
         if counter <= maxi_win:
-            print("Sie haben 100$ gewonnen vom Automat")
+            print("You have won 100$ from the slot machine")
         else:
-            print("Versuchen Sie bitte mit weniger als " + str(maxi_win) + " Versuchen um Geld zu erhalten")
+            print("Please try with less than " + str(maxi_win) + " tries to get money")
 
 c1 = Game()
 
