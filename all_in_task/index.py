@@ -27,24 +27,24 @@ class Game:
             print(f"{self.y} > {self.x} ")
     def money_game(self):
         limit = 100;
-        start = 0  # Grenze einfügen
-        # wenn ein print gegeben dann sieht man den gewürfelte Zahl
+        start = 0  # Insert Boundary
+        # if a print given then you see the dice number
         rolled_number = random.randint(start, limit)
-        # Ein_Zahl=None um den while schleife immer den input drückt bis das Ziel
+        # In_number=None around the while loop always presses the input until the target
         self.In_number = None
-        counter = 0  # um den Zähler der Schleife zu darstellen
+        counter = 0  # to display the counter of the loop
         maxi_win = 3
         while self.In_number != rolled_number:
             self.In_number = int(input("Please enter your number betweent 0 and 100 : "))
             if rolled_number == self.In_number:
-                print("yaaaah, Ihre Zahl ist die richtige Zahl, :) Herzlichen Glückwunsch")
+                print("yaaaah, your number is the right number, :) Congratulations")
             elif rolled_number < self.In_number:
-                print("Ihre Zahl ist größer als die richtige Zahl")
+                print("Your number is greater than the correct number desired")
                 counter = counter + 1
             else:
-                print("Ihre Zahl ist kleiner als die richtige Zahl ): ")
+                print("Your number is less than the correct number ):")
                 counter = counter + 1
-        print(" Sie haben " + str(counter) + " Versuche benötigt")
+        print(" you needed " + str(counter) + "tries" )
 
         if counter <= maxi_win:
             print("Sie haben 100$ gewonnen vom Automat")
