@@ -1,27 +1,33 @@
 
-# coming soon
-import random
+# Two Games in this class
+import random  # to get rolled number
 class Game:
     def __init__(self):
         while True:
-            print('Welcome in Python Game')
-            user = eval(input('Enter your Game Number: '))
+            print('Welcome in Python Game ,press 0 to exit of game')
+            user = eval(input('Enter your Game Number 1 or 2 : '))
 
             if user == 1:
+                print("Max of 2 values: ")
                 x = int(input('Enter your first Number:  '))
                 y = int(input('Enter your second Number:  '))
                 self.Maximum(x, y)
+                print("End of game 1")
             elif user == 2:
+                print(" A Game to chose a number between 0 and 100 with less than 3 tries to get 100$ ")
                 self.money_game()
+                print("End of game 2")
+            elif user == 0:    # to exit of the game and to be the end
+                print("Thank you to your play")
+                exit()
             else:
-                return print('please chose the game number 1 or 2')
-        else:
-            exit()
+                pass
+
+
 
 
 
     def Maximum(self, x, y):
-        print("Max of 2 values: ")
         self.x = x
         self.y = y
         if self.x > self.y:
@@ -31,7 +37,7 @@ class Game:
         else:
             print(f"{self.y} > {self.x} ")
     def money_game(self):
-        limit = 100;
+        limit = 100
         start = 0  # Insert Boundary
         # if a print given then you see the rolled number
         rolled_number = random.randint(start, limit)
@@ -40,7 +46,7 @@ class Game:
         counter = 0  # to display the counter of the loop
         maxi_win = 3
         while self.In_number != rolled_number:
-            self.In_number = int(input("Please enter your number betweent 0 and 100 : "))
+            self.In_number = int(input("Please enter your number between 0 and 100 : "))
             if rolled_number == self.In_number:
                 print("yaaaah, your number is the right number, :) Congratulations")
             elif rolled_number < self.In_number:
@@ -49,7 +55,7 @@ class Game:
             else:
                 print("Your number is less than the correct number ):")
                 counter = counter + 1
-        print(" you needed " + str(counter) + " tries" )
+        print(" you needed " + str(counter+1) + " tries" )
 
         if counter <= maxi_win:
             print("You have won 100$ from the slot machine")
