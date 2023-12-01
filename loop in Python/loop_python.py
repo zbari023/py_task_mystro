@@ -1,3 +1,11 @@
+# Print numbers from 0 to 10 using while
+# Skip the 5 iteration from print
+i = 0
+while i < 10:
+    i += 1
+    if i == 5:
+        continue
+    print(i)
 
 
 
