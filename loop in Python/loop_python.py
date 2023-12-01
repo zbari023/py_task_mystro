@@ -22,6 +22,3 @@ for m in range(6):
         print(f'{m} x {n} = {m*n}')
 
 
-# How to get numbers from 10 to 20 using range
-for x in range(10,21):
-    print(x,end=" ")
